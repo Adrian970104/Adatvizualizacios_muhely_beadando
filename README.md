@@ -11,4 +11,5 @@
   - **VisualStudio fejlesztői környezet**
     - VisualStudioval egyszerűen inportálhatóak a beadandóhoz szükséges könyvtárak. Az elkészült kód futtatására is alkalmas
  
- 
+### Adathalmaz:
+  - KSH weboldaláról letöltött, magyarországi turizmussal kapcsolatos adatok
