@@ -32,3 +32,4 @@
 ### Fileok:
   - **PythonApplication1.py:** python forráskódot tartalmazó futtatható forrsáfájl. A külömböző diagramok megjelenítéséhez a "#" komment      jelek eltávolítása szükséges.
   - **.png fotók:** kapott diagramok png képformátumban.
+  - **turizmus.xls:** adathalmaz
