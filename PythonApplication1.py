@@ -14,6 +14,13 @@ Egyseg = readed['Egyseg']
 Vendeg = readed['Vendeg']
 Vendegelyszakak = readed['Vendegelyszakak']
 
+readed['Kihasznaltsag'] = readed['Vendeg']/readed['Ferohely']*100
+Kihasznaltsag = readed['Kihasznaltsag']
+
+readed['Foglalt_ejszakak'] = readed['Vendegelyszakak']/readed['Vendeg']
+Foglalt_ejszakak = readed['Foglalt_ejszakak']
+
+
 # 1_graf grafikon a ferohelyekrol evszamok szerint
 
 #plt.xlabel('Ev')
@@ -68,17 +75,41 @@ Vendegelyszakak = readed['Vendegelyszakak']
 
 # 5_graf oszlopdiagram a vendegek es a vendegelyszakak szamarol
 
-Ev_indexes = np.arange(len(Ev))
-def_width = 0.4
+#Ev_indexes = np.arange(len(Ev))
+#def_width = 0.4
+#
+#plt.figure(figsize=(10,4))
+#plt.xlabel('Ev')
+#plt.title('Vendegelyszakak/Vendegek/Ev')
+#plt.bar(Ev_indexes-def_width/2,Vendegelyszakak, width = def_width, label = 'Vendegelyszakak')
+#plt.bar(Ev_indexes+def_width/2,Vendeg, width = def_width, label = 'Vendeg')
+#plt.legend()
+#plt.xticks(ticks = Ev_indexes, labels = Ev, rotation = 90)
+#plt.grid(True)
+#plt.tight_layout()
+##plt.savefig('5_graf.png')
+#plt.show()
 
-plt.figure(figsize=(10,4))
+# 6_graf diagram eloallitott adatbol kihasznaltsagrol
+
+#plt.xlabel('Ev')
+#plt.ylabel('Kihasznaltsag (%)')
+#plt.title('Evszerinti szazalekos kihasznaltsag')
+#plt.plot(Ev,Kihasznaltsag,'r-', linewidth = 2 ,label = 'Kihasznaltsag')
+#plt.legend()
+#plt.grid(True)
+#plt.tight_layout()
+##plt.savefig('6_graf.png')
+#plt.show()
+
+# 7_graf oszlop diagram eloallitott adatbol foglalt helyekrol
+
 plt.xlabel('Ev')
-plt.title('Vendegelyszakak/Vendegek/Ev')
-plt.bar(Ev_indexes-def_width/2,Vendegelyszakak, width = def_width, label = 'Vendegelyszakak')
-plt.bar(Ev_indexes+def_width/2,Vendeg, width = def_width, label = 'Vendeg')
+plt.ylabel('Foglalt ejszakak(db)')
+plt.title('Evszerinti foglalt ejszakak darabszama')
+plt.plot(Ev,Foglalt_ejszakak,'y-', linewidth = 2 ,label = 'Foglalt ejszakak')
 plt.legend()
-plt.xticks(ticks = Ev_indexes, labels = Ev, rotation = 90)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('5_graf.png')
+plt.savefig('7_graf.png')
 plt.show()
