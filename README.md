@@ -25,7 +25,7 @@
   **Az adathalmaz elemzése nem volt kitűzött cél, ezért a munka során a vizualizácós módszer minél több funkciójának elsajátítására          koncentráltam.**
     
 ### Fejlesztési lehetőségek:
-  - **Diagramok külalkjának felhasználástól függően való megformázása**
+  - **Diagramok külalkjának megformázása a felhasználástól függően**
   - **Különböző kimutatásokank megfelelő adatok készítése az alap adathalmazból (pandas könyvtár)**
   - **Az eredmények összevetése az évenkénti gazdasági növekedés/csökkenés adataival**
 
