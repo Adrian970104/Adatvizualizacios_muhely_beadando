@@ -24,12 +24,13 @@
   
   **Az adathalmaz elemzése nem volt kitűzött cél, ezért a munka során a vizualizácós módszer minél több funkciójának elsajátítására          koncentráltam.**
     
-### Fejlesztési lehetőségek:
-  - **Diagramok külalkjának megformázása a felhasználástól függően**
-  - **Különböző kimutatásokank megfelelő adatok készítése az alap adathalmazból (pandas könyvtár)**
-  - **Az eredmények összevetése az évenkénti gazdasági növekedés/csökkenés adataival**
-
-### Fileok:
+### Könyvtárstruktúra:
   - **PythonApplication1.py:** python forráskódot tartalmazó futtatható forrsáfájl. A külömböző diagramok megjelenítéséhez a "#" komment      jelek eltávolítása szükséges.
   - **.png fotók:** kapott diagramok png képformátumban.
   - **turizmus.xls:** adathalmaz
+
+### Fejlesztési lehetőségek:
+  - **Menüredszer kialakítása**
+  - **Diagramok külalkjának megformázása a felhasználástól függően**
+  - **Különböző kimutatásokank megfelelő adatok készítése az alap adathalmazból (pandas könyvtár)**
+  - **Az eredmények összevetése az évenkénti gazdasági növekedés/csökkenés adataival**
