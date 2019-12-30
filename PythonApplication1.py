@@ -20,6 +20,26 @@ Kihasznaltsag = readed['Kihasznaltsag']
 readed['Foglalt_ejszakak'] = readed['Vendegelyszakak']/readed['Vendeg']
 Foglalt_ejszakak = readed['Foglalt_ejszakak']
 
+Vendegek_evtizedenkent = [0,0,0,0,0]
+
+for i in range(len(Ev)):
+    if(Ev[i]<1970): 
+        Vendegek_evtizedenkent[0] += Vendeg[i]
+    else: 
+        if(Ev[i]<1980):
+            Vendegek_evtizedenkent[1] += Vendeg[i]
+        else:
+            if(Ev[i]<1990):
+                Vendegek_evtizedenkent[2] += Vendeg[i]
+            else:
+                if(Ev[i]<2000):
+                    Vendegek_evtizedenkent[3] += Vendeg[i]
+                else:
+                    if(Ev[i]<2010):
+                        Vendegek_evtizedenkent[4] += Vendeg[i]
+
+
+
 
 # 1_graf grafikon a ferohelyekrol evszamok szerint
 
@@ -40,6 +60,8 @@ Foglalt_ejszakak = readed['Foglalt_ejszakak']
 #plt.title('Vendegelyszakak/Vendegek/Ev')
 #plt.plot(Ev,Vendegelyszakak,'r--',label = 'Vendegelyszakak')
 #plt.plot(Ev,Vendeg,'g--',label = 'Vendeg')
+#plt.fill_between(Ev,Vendegelyszakak,Vendeg,interpolate=True,alpha = 0.25,color = 'red')
+#plt.fill_between(Ev,Vendeg,interpolate=True,alpha = 0.25,color = 'green')
 #plt.legend()
 #plt.grid(True)
 #plt.tight_layout()
@@ -104,12 +126,26 @@ Foglalt_ejszakak = readed['Foglalt_ejszakak']
 
 # 7_graf oszlop diagram eloallitott adatbol foglalt helyekrol
 
-plt.xlabel('Ev')
-plt.ylabel('Foglalt ejszakak(db)')
-plt.title('Evszerinti foglalt ejszakak darabszama')
-plt.plot(Ev,Foglalt_ejszakak,'y-', linewidth = 2 ,label = 'Foglalt ejszakak')
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.savefig('7_graf.png')
-plt.show()
+#plt.xlabel('Ev')
+#plt.ylabel('Foglalt ejszakak(db)')
+#plt.title('Evszerinti foglalt ejszakak darabszama')
+#plt.plot(Ev,Foglalt_ejszakak,'y-', linewidth = 2 ,label = 'Foglalt ejszakak')
+#plt.legend()
+#plt.grid(True)
+#plt.tight_layout()
+##plt.savefig('7_graf.png')
+#plt.show()
+
+# 8_graf tortadiagram eloallitott adatokbol a vendegek evtizendenkenti eloszlasarol
+
+
+#labels = ['60-as evek','70-es evek','80-as evek','90-es evek','00-es evek']
+#colors = ['blue','red','green','yellow','purple']
+#explode = [0.3,0,0,0,0]
+#plt.pie(Vendegek_evtizedenkent, labels=labels, colors = colors, explode = explode, shadow = True ,wedgeprops={'edgecolor':'black'})
+#
+#plt.title("Vendegek eloszlasa evtizedenkent")
+#plt.grid(True)
+#plt.tight_layout()
+##plt.savefig('8_graf.png')
+#plt.show()
